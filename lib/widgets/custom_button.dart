@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_animation_demo/widgets/custom_text.dart';
+
+import '/widgets/custom_text.dart';
 
 class CustomButton extends StatelessWidget {
   final String label;

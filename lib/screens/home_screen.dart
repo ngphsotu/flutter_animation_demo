@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import '/widgets/custom_text.dart';
 import '/screens/flutter_curves.dart';
 import '/screens/flutter_matrix_four.dart';
-import '/screens/flutter_tween_animation.dart';
 import '/screens/demo_implicit_tanimations.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -58,18 +57,18 @@ class HomeScreen extends StatelessWidget {
                     builder: (_) => const FlutterCurvesExample())),
           ),
           const Divider(),
-          ListTile(
-            leading: const CustomText(text: '👉🏻', size: 30),
-            title: const CustomText(
-              text: 'Flutter Tween Animations',
-              size: 18,
-            ),
-            onTap: () => Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (_) => const TweenAnimationExample())),
-          ),
-          const Divider(),
+          // ListTile(
+          //   leading: const CustomText(text: '👉🏻', size: 30),
+          //   title: const CustomText(
+          //     text: 'Flutter Tween Animations',
+          //     size: 18,
+          //   ),
+          //   onTap: () => Navigator.push(
+          //       context,
+          //       MaterialPageRoute(
+          //           builder: (_) => const TweenAnimationExample())),
+          // ),
+          // const Divider(),
         ],
       ),
 
