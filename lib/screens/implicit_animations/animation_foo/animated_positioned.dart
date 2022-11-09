@@ -53,7 +53,12 @@ class _DemoAnimatedPositionedState extends State<DemoAnimatedPositioned> {
                       },
                       child: Container(
                         color: Colors.pink,
-                        child: const Center(child: Text('Tap me')),
+                        child: const Center(
+                          child: Text(
+                            'Tap me',
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ),
                       ),
                     ),
                   ),
