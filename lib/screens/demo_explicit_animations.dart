@@ -4,15 +4,15 @@ import '../widgets/custom_text.dart';
 import 'explicit_animations/animated_widget.dart';
 import 'explicit_animations/animated_builder.dart';
 import 'explicit_animations/foo_transition/fade_transition.dart';
-import 'explicit_animations/foo_transition/positioned_transition.dart';
-import 'explicit_animations/foo_transition/relative_positioned_transition.dart';
-import 'explicit_animations/foo_transition/rotation_transition.dart';
-import 'explicit_animations/foo_transition/scale_transition.dart';
 import 'explicit_animations/foo_transition/size_transition.dart';
 import 'explicit_animations/foo_transition/align_transition.dart';
+import 'explicit_animations/foo_transition/slide_transition.dart';
+import 'explicit_animations/foo_transition/scale_transition.dart';
+import 'explicit_animations/foo_transition/rotation_transition.dart';
+import 'explicit_animations/foo_transition/positioned_transition.dart';
 import 'explicit_animations/foo_transition/decorate_box_transition.dart';
 import 'explicit_animations/foo_transition/default_text_style_transition.dart';
-import 'explicit_animations/foo_transition/slide_transition.dart';
+import 'explicit_animations/foo_transition/relative_positioned_transition.dart';
 
 class DemoExplicitAnimations extends StatelessWidget {
   static const String _title = 'Explicit Animations';
