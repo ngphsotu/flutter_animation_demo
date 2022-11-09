@@ -20,38 +20,49 @@ class DemoAnimatedFractionallySizedBox extends StatefulWidget {
 class _DemoAnimatedFractionallySizedBoxState
     extends State<DemoAnimatedFractionallySizedBox> {
   bool _selected = false;
+  static const String _title = 'AnimatedFractionallySizedBox';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: GestureDetector(
-        onTap: () {
-          setState(() {
-            _selected = !_selected;
-          });
-        },
-        child: Center(
-          child: SizedBox(
-            width: 200,
-            height: 200,
-            child: Container(
-              color: Colors.red,
-              child: AnimatedFractionallySizedBox(
-                widthFactor: _selected ? 0.25 : 0.75,
-                heightFactor: _selected ? 0.75 : 0.25,
-                alignment:
-                    _selected ? Alignment.topLeft : Alignment.bottomRight,
-                duration: const Duration(seconds: 1),
-                curve: Curves.fastOutSlowIn,
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          const Text(
+            _title,
+            style: TextStyle(color: Colors.pink, fontSize: 20),
+          ),
+          const SizedBox(height: 20),
+          GestureDetector(
+            onTap: () {
+              setState(() {
+                _selected = !_selected;
+              });
+            },
+            child: Center(
+              child: SizedBox(
+                width: 200,
+                height: 200,
                 child: Container(
-                  color: Colors.yellow,
-                  child: const FlutterLogo(size: 75),
+                  color: Colors.red,
+                  child: AnimatedFractionallySizedBox(
+                    widthFactor: _selected ? 0.25 : 0.75,
+                    heightFactor: _selected ? 0.75 : 0.25,
+                    alignment:
+                        _selected ? Alignment.topLeft : Alignment.bottomRight,
+                    duration: const Duration(seconds: 1),
+                    curve: Curves.fastOutSlowIn,
+                    child: Container(
+                      color: Colors.yellow,
+                      child: const FlutterLogo(size: 75),
+                    ),
+                  ),
                 ),
               ),
             ),
           ),
-        ),
+        ],
       ),
     );
   }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class NinthScreen extends StatelessWidget {
-  const NinthScreen({super.key});
+class TenthScreen extends StatelessWidget {
+  const TenthScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,6 +20,7 @@ class DemoAnimatedRotation extends StatefulWidget {
 
 class _DemoAnimatedRotationState extends State<DemoAnimatedRotation> {
   double _turns = 0;
+  static const String _title = 'AnimatedRotation';
 
   void _changeRotation() {
     setState(() => _turns += 1 / 8);
@@ -32,7 +33,12 @@ class _DemoAnimatedRotationState extends State<DemoAnimatedRotation> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
+          children: [
+            const Text(
+              _title,
+              style: TextStyle(color: Colors.pink, fontSize: 20),
+            ),
+            const SizedBox(height: 20),
             Padding(
               padding: const EdgeInsets.all(50),
               child: AnimatedRotation(

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class EighthScreen extends StatelessWidget {
-  const EighthScreen({super.key});
+class NinthScreen extends StatelessWidget {
+  const NinthScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,7 @@ class _DemoAnimatedPositionedState extends State<DemoAnimatedPositioned> {
         children: [
           const Text(
             _title,
-            style: TextStyle(color: Colors.black, fontSize: 20),
+            style: TextStyle(color: Colors.pink, fontSize: 20),
           ),
           Center(
             child: SizedBox(

@@ -7,7 +7,7 @@ import 'implicit_animations/animated_size.dart';
 import 'implicit_animations/animated_slide.dart';
 import 'implicit_animations/animated_align.dart';
 import 'implicit_animations/animated_scale.dart';
-import 'implicit_animations/animated_widget.dart';
+import 'implicit_animations/animated_physical_model.dart';
 import 'implicit_animations/animated_opacity.dart';
 import 'implicit_animations/animated_padding.dart';
 import 'implicit_animations/animated_switcher.dart';

@@ -31,7 +31,7 @@ class _DemoAnimatedAlignState extends State<DemoAnimatedAlign> {
         children: [
           const Text(
             _title,
-            style: TextStyle(color: Colors.black, fontSize: 20),
+            style: TextStyle(color: Colors.pink, fontSize: 20),
           ),
           const SizedBox(height: 20),
           GestureDetector(
@@ -44,13 +44,13 @@ class _DemoAnimatedAlignState extends State<DemoAnimatedAlign> {
               child: Container(
                 width: 250.0,
                 height: 250.0,
-                color: Colors.red,
+                color: Colors.amber[200],
                 child: AnimatedAlign(
                   alignment:
                       selected ? Alignment.topRight : Alignment.bottomLeft,
                   duration: const Duration(seconds: 1),
                   curve: Curves.fastOutSlowIn,
-                  child: const FlutterLogo(size: 50.0),
+                  child: const FlutterLogo(size: 75),
                 ),
               ),
             ),

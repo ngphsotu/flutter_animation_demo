@@ -37,7 +37,7 @@ class _DemoAnimatedPaddingState extends State<DemoAnimatedPadding> {
         children: [
           const Text(
             _title,
-            style: TextStyle(color: Colors.black, fontSize: 20),
+            style: TextStyle(color: Colors.pink, fontSize: 20),
           ),
           const SizedBox(height: 20),
           AnimatedPadding(

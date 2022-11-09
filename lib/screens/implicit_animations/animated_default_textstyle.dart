@@ -24,6 +24,7 @@ class _DemoAnimatedDefaultTextStyleState
   bool _selected = true;
   double _fontSize = 50;
   Color _color = Colors.red;
+  static const String _title = 'AnimatedDefaultTextStyle';
 
   @override
   Widget build(BuildContext context) {
@@ -33,6 +34,11 @@ class _DemoAnimatedDefaultTextStyleState
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
+            const Text(
+              _title,
+              style: TextStyle(color: Colors.pink, fontSize: 20),
+            ),
+            const SizedBox(height: 20),
             SizedBox(
               height: 200,
               child: AnimatedDefaultTextStyle(
@@ -49,11 +55,14 @@ class _DemoAnimatedDefaultTextStyleState
               onPressed: () {
                 setState(() {
                   _fontSize = _selected ? 100 : 50;
-                  _color = _selected ? Colors.blue : Colors.red;
+                  _color = _selected ? Colors.blue : Colors.amber;
                   _selected = !_selected;
                 });
               },
-              child: const Text('Switch', style: TextStyle(fontSize: 20)),
+              child: const Text(
+                'Switch',
+                style: TextStyle(fontSize: 20, color: Colors.pink),
+              ),
             )
           ],
         ),

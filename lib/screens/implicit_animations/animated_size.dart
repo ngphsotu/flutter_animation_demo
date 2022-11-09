@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class EleventhScreen extends StatelessWidget {
-  const EleventhScreen({super.key});
+class TwelfthScreen extends StatelessWidget {
+  const TwelfthScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class DemoAnimatedSized extends StatefulWidget {
 }
 
 class _DemoAnimatedSizedState extends State<DemoAnimatedSized> {
-  static const String _title = 'AnimatedSized';
+  static const String _title = 'AnimatedSize';
   double _size = 50.0;
   bool _large = false;
 
@@ -39,14 +39,14 @@ class _DemoAnimatedSizedState extends State<DemoAnimatedSized> {
         children: [
           const Text(
             _title,
-            style: TextStyle(color: Colors.black, fontSize: 20),
+            style: TextStyle(color: Colors.pink, fontSize: 20),
           ),
           const SizedBox(height: 20),
           Center(
             child: GestureDetector(
               onTap: () => _updateSize(),
               child: Container(
-                color: Colors.pink[300],
+                color: Colors.amber[200],
                 child: AnimatedSize(
                   curve: Curves.easeIn,
                   duration: const Duration(seconds: 1),

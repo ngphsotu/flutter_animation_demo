@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class TwelfthScreen extends StatelessWidget {
-  const TwelfthScreen({super.key});
+class ThirteenScreen extends StatelessWidget {
+  const ThirteenScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,6 +20,7 @@ class DemoAnimatedSlide extends StatefulWidget {
 
 class _DemoAnimatedSlideState extends State<DemoAnimatedSlide> {
   Offset offset = Offset.zero;
+  static const String _title = 'AnimatedSlide';
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +32,12 @@ class _DemoAnimatedSlideState extends State<DemoAnimatedSlide> {
         padding: const EdgeInsets.all(15),
         child: Column(
           mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
+          children: [
+            const Text(
+              _title,
+              style: TextStyle(color: Colors.pink, fontSize: 20),
+            ),
+            const SizedBox(height: 20),
             Expanded(
               child: Row(
                 children: <Widget>[
@@ -43,7 +49,7 @@ class _DemoAnimatedSlideState extends State<DemoAnimatedSlide> {
                         offset: offset,
                         duration: const Duration(milliseconds: 500),
                         curve: Curves.easeInOut,
-                        child: const FlutterLogo(size: 50),
+                        child: const FlutterLogo(size: 70),
                       ),
                     ),
                   ),
