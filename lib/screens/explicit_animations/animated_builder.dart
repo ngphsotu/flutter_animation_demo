@@ -1,27 +1,17 @@
 import 'dart:math' as math;
 import 'package:flutter/material.dart';
 
-class FourthScreen extends StatelessWidget {
-  const FourthScreen({super.key});
+class DemoAnimatedBuilder extends StatefulWidget {
+  const DemoAnimatedBuilder({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      body: DemoAnimatedWidget(),
-    );
-  }
+  State<StatefulWidget> createState() => _DemoAnimatedBuilderState();
 }
 
-class DemoAnimatedWidget extends StatefulWidget {
-  const DemoAnimatedWidget({super.key});
-
-  @override
-  State<StatefulWidget> createState() => _DemoAnimatedWidgetState();
-}
-
-class _DemoAnimatedWidgetState extends State<DemoAnimatedWidget>
+class _DemoAnimatedBuilderState extends State<DemoAnimatedBuilder>
     with TickerProviderStateMixin {
   late AnimationController _controller;
+  static const String _title = 'AnimatedBuilder';
 
   @override
   void initState() {
@@ -47,7 +37,7 @@ class _DemoAnimatedWidgetState extends State<DemoAnimatedWidget>
         backgroundColor: Colors.white,
         iconTheme: const IconThemeData(color: Colors.black),
         title: const Text(
-          'AnimatedBuilder Examples',
+          _title,
           style: TextStyle(color: Colors.black),
         ),
       ),

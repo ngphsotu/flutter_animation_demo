@@ -2,17 +2,6 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 
-class ThirdScreen extends StatelessWidget {
-  const ThirdScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      body: DemoAnimatedWidget(),
-    );
-  }
-}
-
 class SpinningContainer extends AnimatedWidget {
   const SpinningContainer({
     super.key,
@@ -43,6 +32,7 @@ class DemoAnimatedWidget extends StatefulWidget {
 /// [TickerProviderStateMixin].
 class _DemoAnimatedWidgetState extends State<DemoAnimatedWidget>
     with TickerProviderStateMixin {
+  static const String _title = 'AnimatedWidget';
   late final AnimationController _controller = AnimationController(
     duration: const Duration(seconds: 10),
     vsync: this,
@@ -63,7 +53,7 @@ class _DemoAnimatedWidgetState extends State<DemoAnimatedWidget>
           backgroundColor: Colors.white,
           iconTheme: const IconThemeData(color: Colors.black),
           title: const Text(
-            'AnimatedWidget Examples',
+            _title,
             style: TextStyle(color: Colors.black),
           ),
         ),

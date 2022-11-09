@@ -1,24 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-import 'implicit_animations/animated_container.dart';
-import 'implicit_animations/animated_cross_fade.dart';
-import 'implicit_animations/animated_size.dart';
-import 'implicit_animations/animated_slide.dart';
-import 'implicit_animations/animated_align.dart';
-import 'implicit_animations/animated_scale.dart';
-import 'implicit_animations/animated_physical_model.dart';
-import 'implicit_animations/animated_opacity.dart';
-import 'implicit_animations/animated_padding.dart';
-import 'implicit_animations/animated_switcher.dart';
-import 'implicit_animations/animated_rotation.dart';
-import 'implicit_animations/animated_positioned.dart';
 import 'implicit_animations/tween_animation_builder.dart';
-import 'implicit_animations/animated_default_textstyle.dart';
-import 'implicit_animations/animated_fractionally_sizedbox.dart';
+import 'implicit_animations/animation_foo/animated_icon.dart';
+import 'implicit_animations/animation_foo/animated_size.dart';
+import 'implicit_animations/animation_foo/animated_slide.dart';
+import 'implicit_animations/animation_foo/animated_align.dart';
+import 'implicit_animations/animation_foo/animated_scale.dart';
+import 'implicit_animations/animation_foo/animated_padding.dart';
+import 'implicit_animations/animation_foo/animated_opacity.dart';
+import 'implicit_animations/animation_foo/animated_rotation.dart';
+import 'implicit_animations/animation_foo/animated_switcher.dart';
+import 'implicit_animations/animation_foo/animated_container.dart';
+import 'implicit_animations/animation_foo/animated_cross_fade.dart';
+import 'implicit_animations/animation_foo/animated_positioned.dart';
+import 'implicit_animations/animation_foo/animated_physical_model.dart';
+import 'implicit_animations/animation_foo/animated_default_textstyle.dart';
 
 class DemoImplicitAnimations extends StatelessWidget {
   final _controller = PageController();
+  static const String _title = 'Implicit Animations';
 
   DemoImplicitAnimations({super.key});
 
@@ -31,7 +32,7 @@ class DemoImplicitAnimations extends StatelessWidget {
         backgroundColor: Colors.white,
         iconTheme: const IconThemeData(color: Colors.black),
         title: const Text(
-          'Implicit Animations',
+          _title,
           style: TextStyle(color: Colors.black),
         ),
       ),
