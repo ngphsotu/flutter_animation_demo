@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class FirstScreen extends StatelessWidget {
-  const FirstScreen({super.key});
+class SecondScreen extends StatelessWidget {
+  const SecondScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,6 +25,7 @@ class _DemoAnimatedContainerState extends State<DemoAnimatedContainer> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -43,7 +44,10 @@ class _DemoAnimatedContainerState extends State<DemoAnimatedContainer> {
               child: AnimatedContainer(
                 width: selected ? 200 : 100,
                 height: selected ? 100 : 200,
-                color: selected ? Colors.amber : Colors.pink,
+                color: selected ? Colors.yellow : Colors.orange,
+                // decoration: const BoxDecoration(
+                //     gradient:
+                //         LinearGradient(colors: [Colors.yellow, Colors.orange])),
                 alignment: selected
                     ? Alignment.center
                     : AlignmentDirectional.topCenter,

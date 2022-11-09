@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class SeventhScreen extends StatelessWidget {
-  const SeventhScreen({super.key});
+class FifteenthScreen extends StatelessWidget {
+  const FifteenthScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 import '/widgets/custom_text.dart';
-import '/screens/flutter_curves.dart';
-import '/screens/flutter_matrix_four.dart';
-import '/screens/demo_implicit_tanimations.dart';
+
+import 'demo_explicit_animations.dart';
+import 'demo_implicit_animations.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -26,63 +26,51 @@ class HomeScreen extends StatelessWidget {
           ListTile(
             leading: const CustomText(text: '👉🏻', size: 30),
             title: const CustomText(
-              text: 'Flutter Implicit Animated',
+              text: 'Flutter Implicit Animations',
               size: 18,
             ),
             onTap: () => Navigator.push(context,
-                MaterialPageRoute(builder: (_) => DemoImplicitAnimation())),
+                MaterialPageRoute(builder: (_) => DemoImplicitAnimations())),
           ),
           const Divider(),
           ListTile(
             leading: const CustomText(text: '👉🏻', size: 30),
             title: const CustomText(
-              text: 'Flutter Matrix4',
+              text: 'Flutter Explicit Animations',
               size: 18,
             ),
             onTap: () => Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (_) => const FlutterMatrixFourExample())),
-          ),
-          const Divider(),
-          ListTile(
-            leading: const CustomText(text: '👉🏻', size: 30),
-            title: const CustomText(
-              text: 'Flutter Animation Curves',
-              size: 18,
-            ),
-            onTap: () => Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (_) => const FlutterCurvesExample())),
+                    builder: (_) => const DemoExplicitAnimations())),
           ),
           const Divider(),
           // ListTile(
           //   leading: const CustomText(text: '👉🏻', size: 30),
           //   title: const CustomText(
-          //     text: 'Flutter Tween Animations',
+          //     text: 'Flutter Matrix4',
           //     size: 18,
           //   ),
           //   onTap: () => Navigator.push(
           //       context,
           //       MaterialPageRoute(
-          //           builder: (_) => const TweenAnimationExample())),
+          //           builder: (_) => const FlutterMatrixFourExample())),
+          // ),
+          // const Divider(),
+          // ListTile(
+          //   leading: const CustomText(text: '👉🏻', size: 30),
+          //   title: const CustomText(
+          //     text: 'Flutter Animation Curves',
+          //     size: 18,
+          //   ),
+          //   onTap: () => Navigator.push(
+          //       context,
+          //       MaterialPageRoute(
+          //           builder: (_) => const FlutterCurvesExample())),
           // ),
           // const Divider(),
         ],
       ),
-
-      // Center(
-      //   child: ElevatedButton(
-      //     onPressed: () {
-      //       Navigator.push(
-      //         context,
-      //         MaterialPageRoute(builder: (context) => const FirstScreen()),
-      //       );
-      //     },
-      //     child: const Text('AnimatedContainer'),
-      //   ),
-      // ),
     );
   }
 }

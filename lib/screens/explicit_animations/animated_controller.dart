@@ -3,14 +3,23 @@ import 'package:flutter/material.dart';
 import '/widgets/custom_text.dart';
 import '/widgets/custom_button.dart';
 
-class FlutterCurvesExample extends StatefulWidget {
-  const FlutterCurvesExample({super.key});
+class SecondScreen extends StatelessWidget {
+  const SecondScreen({super.key});
 
   @override
-  State<FlutterCurvesExample> createState() => _FlutterCurvesExampleState();
+  Widget build(BuildContext context) {
+    return const DemoAnimatedContainer();
+  }
 }
 
-class _FlutterCurvesExampleState extends State<FlutterCurvesExample> {
+class DemoAnimatedContainer extends StatefulWidget {
+  const DemoAnimatedContainer({super.key});
+
+  @override
+  State<DemoAnimatedContainer> createState() => _DemoAnimatedContainerState();
+}
+
+class _DemoAnimatedContainerState extends State<DemoAnimatedContainer> {
   var _width = 40.0;
 
   @override

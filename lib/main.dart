@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'screens/home_screen.dart';
 
-void main() => runApp(const MyApp());
+Future<void> main() async => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
