@@ -23,7 +23,7 @@ class _DemoAnimatedDefaultTextStyleState
     extends State<DemoAnimatedDefaultTextStyle> {
   bool _selected = true;
   double _fontSize = 50;
-  Color _color = Colors.red;
+  Color _color = Colors.amber;
   static const String _title = 'AnimatedDefaultTextStyle';
 
   @override
