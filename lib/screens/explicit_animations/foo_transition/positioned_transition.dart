@@ -35,10 +35,7 @@ class _DemoPositionedTransitionState extends State<DemoPositionedTransition>
         elevation: 0,
         backgroundColor: Colors.white,
         iconTheme: const IconThemeData(color: Colors.black),
-        title: const Text(
-          _title,
-          style: TextStyle(color: Colors.black),
-        ),
+        title: const Text(_title, style: TextStyle(color: Colors.black)),
       ),
       body: LayoutBuilder(
         builder: (BuildContext context, BoxConstraints constraints) {

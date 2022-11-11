@@ -55,10 +55,7 @@ class _DemoDecoratedBoxTransitionState extends State<DemoDecoratedBoxTransition>
         elevation: 0,
         backgroundColor: Colors.white,
         iconTheme: const IconThemeData(color: Colors.black),
-        title: const Text(
-          _title,
-          style: TextStyle(color: Colors.black),
-        ),
+        title: const Text(_title, style: TextStyle(color: Colors.black)),
       ),
       body: Container(
         color: Colors.white,

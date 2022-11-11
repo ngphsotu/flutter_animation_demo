@@ -52,10 +52,7 @@ class _DemoAnimatedWidgetState extends State<DemoAnimatedWidget>
           elevation: 0,
           backgroundColor: Colors.white,
           iconTheme: const IconThemeData(color: Colors.black),
-          title: const Text(
-            _title,
-            style: TextStyle(color: Colors.black),
-          ),
+          title: const Text(_title, style: TextStyle(color: Colors.black)),
         ),
         body: Center(child: SpinningContainer(controller: _controller)));
   }

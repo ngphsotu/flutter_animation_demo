@@ -45,9 +45,6 @@ class _DemoAnimatedContainerState extends State<DemoAnimatedContainer> {
                 width: selected ? 200 : 100,
                 height: selected ? 100 : 200,
                 color: selected ? Colors.yellow : Colors.orange,
-                // decoration: const BoxDecoration(
-                //     gradient:
-                //         LinearGradient(colors: [Colors.yellow, Colors.orange])),
                 alignment: selected
                     ? Alignment.center
                     : AlignmentDirectional.topCenter,

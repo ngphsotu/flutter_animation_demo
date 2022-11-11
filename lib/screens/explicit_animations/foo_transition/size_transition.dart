@@ -35,10 +35,7 @@ class _DemoSizeTransitionState extends State<DemoSizeTransition>
         elevation: 0,
         backgroundColor: Colors.white,
         iconTheme: const IconThemeData(color: Colors.black),
-        title: const Text(
-          _title,
-          style: TextStyle(color: Colors.black),
-        ),
+        title: const Text(_title, style: TextStyle(color: Colors.black)),
       ),
       body: SizeTransition(
         sizeFactor: _animation,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../widgets/custom_text.dart';
+import '/widgets/custom_text.dart';
 import 'explicit_animations/animated_widget.dart';
 import 'explicit_animations/animated_builder.dart';
 import 'explicit_animations/foo_transition/fade_transition.dart';
@@ -24,12 +24,9 @@ class DemoExplicitAnimations extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Colors.white,
         iconTheme: const IconThemeData(color: Colors.black),
-        title: const Text(
-          _title,
-          style: TextStyle(color: Colors.black),
-        ),
+        backgroundColor: Colors.white,
+        title: const Text(_title, style: TextStyle(color: Colors.black)),
       ),
       body: ListView(
         children: [

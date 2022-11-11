@@ -13,6 +13,7 @@ class _DemoAlignTransitionState extends State<DemoAlignTransition>
     with TickerProviderStateMixin {
   // Using `late final` for lazy initialization. See
   // https://dart.dev/null-safety/understanding-null-safety#lazy-initialization.
+  static const String _title = 'AlignTransition';
   late final AnimationController _controller = AnimationController(
     duration: const Duration(seconds: 2),
     vsync: this,
@@ -26,8 +27,6 @@ class _DemoAlignTransitionState extends State<DemoAlignTransition>
       curve: Curves.decelerate,
     ),
   );
-
-  static const String _title = 'AlignTransition';
 
   @override
   void dispose() {
@@ -43,10 +42,7 @@ class _DemoAlignTransitionState extends State<DemoAlignTransition>
         elevation: 0,
         backgroundColor: Colors.white,
         iconTheme: const IconThemeData(color: Colors.black),
-        title: const Text(
-          _title,
-          style: TextStyle(color: Colors.black),
-        ),
+        title: const Text(_title, style: TextStyle(color: Colors.black)),
       ),
       body: Container(
         color: Colors.white,

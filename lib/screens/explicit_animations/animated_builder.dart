@@ -36,10 +36,7 @@ class _DemoAnimatedBuilderState extends State<DemoAnimatedBuilder>
         elevation: 0,
         backgroundColor: Colors.white,
         iconTheme: const IconThemeData(color: Colors.black),
-        title: const Text(
-          _title,
-          style: TextStyle(color: Colors.black),
-        ),
+        title: const Text(_title, style: TextStyle(color: Colors.black)),
       ),
       body: Center(
         child: AnimatedBuilder(

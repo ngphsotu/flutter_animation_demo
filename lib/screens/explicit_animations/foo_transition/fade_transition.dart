@@ -35,10 +35,7 @@ class _DemoFadeTransitionState extends State<DemoFadeTransition>
         elevation: 0,
         backgroundColor: Colors.white,
         iconTheme: const IconThemeData(color: Colors.black),
-        title: const Text(
-          _title,
-          style: TextStyle(color: Colors.black),
-        ),
+        title: const Text(_title, style: TextStyle(color: Colors.black)),
       ),
       body: Center(
         child: Container(
@@ -46,10 +43,9 @@ class _DemoFadeTransitionState extends State<DemoFadeTransition>
           child: FadeTransition(
             opacity: _animation,
             child: const Padding(
-                padding: EdgeInsets.all(8),
-                child: FlutterLogo(
-                  size: 200,
-                )),
+              padding: EdgeInsets.all(8),
+              child: FlutterLogo(size: 200),
+            ),
           ),
         ),
       ),

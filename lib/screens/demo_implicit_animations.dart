@@ -31,10 +31,7 @@ class DemoImplicitAnimations extends StatelessWidget {
         elevation: 0,
         backgroundColor: Colors.white,
         iconTheme: const IconThemeData(color: Colors.black),
-        title: const Text(
-          _title,
-          style: TextStyle(color: Colors.black),
-        ),
+        title: const Text(_title, style: TextStyle(color: Colors.black)),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -68,11 +65,11 @@ class DemoImplicitAnimations extends StatelessWidget {
             controller: _controller,
             count: 15,
             effect: WormEffect(
-              activeDotColor: Colors.pink,
               dotColor: Colors.pink.shade100,
-              dotHeight: 10,
               dotWidth: 10,
               spacing: 10,
+              dotHeight: 10,
+              activeDotColor: Colors.pink,
               //verticalOffset: 50,
             ),
           ),
