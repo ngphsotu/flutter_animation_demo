@@ -1,16 +1,5 @@
 import 'package:flutter/material.dart';
 
-class EleventhScreen extends StatelessWidget {
-  const EleventhScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(child: DemoAnimatedScale()),
-    );
-  }
-}
-
 class DemoAnimatedScale extends StatefulWidget {
   const DemoAnimatedScale({super.key});
 
@@ -19,8 +8,8 @@ class DemoAnimatedScale extends StatefulWidget {
 }
 
 class _DemoAnimatedScaleState extends State<DemoAnimatedScale> {
-  double scale = 1.0;
   static const String _title = 'AnimatedScale';
+  double scale = 1;
 
   void _changeScale() {
     setState(() {

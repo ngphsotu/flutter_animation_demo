@@ -1,16 +1,5 @@
 import 'package:flutter/material.dart';
 
-class ThirteenScreen extends StatelessWidget {
-  const ThirteenScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      body: DemoAnimatedSlide(),
-    );
-  }
-}
-
 class DemoAnimatedSlide extends StatefulWidget {
   const DemoAnimatedSlide({super.key});
 
@@ -19,8 +8,8 @@ class DemoAnimatedSlide extends StatefulWidget {
 }
 
 class _DemoAnimatedSlideState extends State<DemoAnimatedSlide> {
-  Offset offset = Offset.zero;
   static const String _title = 'AnimatedSlide';
+  Offset _offset = Offset.zero;
 
   @override
   Widget build(BuildContext context) {
@@ -40,13 +29,13 @@ class _DemoAnimatedSlideState extends State<DemoAnimatedSlide> {
             const SizedBox(height: 20),
             Expanded(
               child: Row(
-                children: <Widget>[
+                children: [
                   Expanded(
                     child: Container(
                       alignment: Alignment.center,
                       padding: const EdgeInsets.all(50),
                       child: AnimatedSlide(
-                        offset: offset,
+                        offset: _offset,
                         duration: const Duration(milliseconds: 500),
                         curve: Curves.easeInOut,
                         child: const FlutterLogo(size: 70),
@@ -54,7 +43,7 @@ class _DemoAnimatedSlideState extends State<DemoAnimatedSlide> {
                     ),
                   ),
                   Column(
-                    children: <Widget>[
+                    children: [
                       Text('Y', style: textTheme.bodyMedium),
                       Expanded(
                         child: RotatedBox(
@@ -62,10 +51,10 @@ class _DemoAnimatedSlideState extends State<DemoAnimatedSlide> {
                           child: Slider(
                             min: -5,
                             max: 5,
-                            value: offset.dy,
+                            value: _offset.dy,
                             onChanged: (double value) {
                               setState(() {
-                                offset = Offset(offset.dx, value);
+                                _offset = Offset(_offset.dx, value);
                               });
                             },
                           ),
@@ -78,16 +67,16 @@ class _DemoAnimatedSlideState extends State<DemoAnimatedSlide> {
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
+              children: [
                 Text('X', style: textTheme.bodyMedium),
                 Expanded(
                   child: Slider(
                     min: -5,
                     max: 5,
-                    value: offset.dx,
+                    value: _offset.dx,
                     onChanged: (double value) {
                       setState(() {
-                        offset = Offset(value, offset.dy);
+                        _offset = Offset(value, _offset.dy);
                       });
                     },
                   ),

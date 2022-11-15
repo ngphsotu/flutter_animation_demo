@@ -41,6 +41,12 @@ class _DemoAnimatedBuilderState extends State<DemoAnimatedBuilder>
       body: Center(
         child: AnimatedBuilder(
           animation: _controller,
+          builder: (BuildContext context, Widget? child) {
+            return Transform.rotate(
+              angle: _controller.value * 2 * math.pi,
+              child: child,
+            );
+          },
           child: Container(
             width: 200,
             height: 200,
@@ -48,19 +54,10 @@ class _DemoAnimatedBuilderState extends State<DemoAnimatedBuilder>
             child: const Center(
               child: Text(
                 'Flutter',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 30,
-                ),
+                style: TextStyle(color: Colors.white, fontSize: 30),
               ),
             ),
           ),
-          builder: (BuildContext context, Widget? child) {
-            return Transform.rotate(
-              angle: _controller.value * 2 * math.pi,
-              child: child,
-            );
-          },
         ),
       ),
     );

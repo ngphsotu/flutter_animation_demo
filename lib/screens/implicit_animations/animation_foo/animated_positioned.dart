@@ -1,16 +1,5 @@
 import 'package:flutter/material.dart';
 
-class NinthScreen extends StatelessWidget {
-  const NinthScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      body: DemoAnimatedPositioned(),
-    );
-  }
-}
-
 class DemoAnimatedPositioned extends StatefulWidget {
   const DemoAnimatedPositioned({super.key});
 
@@ -20,7 +9,7 @@ class DemoAnimatedPositioned extends StatefulWidget {
 
 class _DemoAnimatedPositionedState extends State<DemoAnimatedPositioned> {
   static const String _title = 'AnimatedPositioned';
-  bool selected = false;
+  bool _selected = false;
 
   @override
   Widget build(BuildContext context) {
@@ -40,15 +29,15 @@ class _DemoAnimatedPositionedState extends State<DemoAnimatedPositioned> {
               child: Stack(
                 children: <Widget>[
                   AnimatedPositioned(
-                    width: selected ? 200.0 : 50.0,
-                    height: selected ? 50.0 : 200.0,
-                    top: selected ? 50.0 : 150.0,
+                    width: _selected ? 200 : 50,
+                    height: _selected ? 50 : 200,
+                    top: _selected ? 50 : 150,
                     duration: const Duration(seconds: 2),
                     curve: Curves.fastOutSlowIn,
                     child: GestureDetector(
                       onTap: () {
                         setState(() {
-                          selected = !selected;
+                          _selected = !_selected;
                         });
                       },
                       child: Container(

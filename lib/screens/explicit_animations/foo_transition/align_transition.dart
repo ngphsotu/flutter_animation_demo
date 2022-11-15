@@ -14,10 +14,12 @@ class _DemoAlignTransitionState extends State<DemoAlignTransition>
   // Using `late final` for lazy initialization. See
   // https://dart.dev/null-safety/understanding-null-safety#lazy-initialization.
   static const String _title = 'AlignTransition';
+
   late final AnimationController _controller = AnimationController(
     duration: const Duration(seconds: 2),
     vsync: this,
   )..repeat(reverse: true);
+
   late final Animation<AlignmentGeometry> _animation = Tween<AlignmentGeometry>(
     begin: Alignment.bottomLeft,
     end: Alignment.center,

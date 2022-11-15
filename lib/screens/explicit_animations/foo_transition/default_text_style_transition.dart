@@ -13,10 +13,10 @@ class DemoDefaultTextStyleTransition extends StatefulWidget {
 class _DemoDefaultTextStyleTransitionState
     extends State<DemoDefaultTextStyleTransition>
     with TickerProviderStateMixin {
+  static const String _title = 'DefaultTextStyleTransition';
   late AnimationController _controller;
   late TextStyleTween _styleTween;
   late CurvedAnimation _curvedAnimation;
-  static const String _title = 'DefaultTextStyleTransition';
 
   @override
   void initState() {

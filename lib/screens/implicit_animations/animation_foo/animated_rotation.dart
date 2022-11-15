@@ -1,16 +1,5 @@
 import 'package:flutter/material.dart';
 
-class TenthScreen extends StatelessWidget {
-  const TenthScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(child: DemoAnimatedRotation()),
-    );
-  }
-}
-
 class DemoAnimatedRotation extends StatefulWidget {
   const DemoAnimatedRotation({super.key});
 
@@ -19,8 +8,8 @@ class DemoAnimatedRotation extends StatefulWidget {
 }
 
 class _DemoAnimatedRotationState extends State<DemoAnimatedRotation> {
-  double _turns = 0;
   static const String _title = 'AnimatedRotation';
+  double _turns = 0;
 
   void _changeRotation() {
     setState(() => _turns += 1 / 8);
@@ -44,9 +33,7 @@ class _DemoAnimatedRotationState extends State<DemoAnimatedRotation> {
               child: AnimatedRotation(
                 turns: _turns,
                 duration: const Duration(seconds: 1),
-                child: const FlutterLogo(
-                  size: 200,
-                ),
+                child: const FlutterLogo(size: 200),
               ),
             ),
             TextButton(

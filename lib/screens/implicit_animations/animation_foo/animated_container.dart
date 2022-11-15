@@ -1,16 +1,5 @@
 import 'package:flutter/material.dart';
 
-class SecondScreen extends StatelessWidget {
-  const SecondScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(child: DemoAnimatedContainer()),
-    );
-  }
-}
-
 class DemoAnimatedContainer extends StatefulWidget {
   const DemoAnimatedContainer({super.key});
 
@@ -20,7 +9,7 @@ class DemoAnimatedContainer extends StatefulWidget {
 
 class _DemoAnimatedContainerState extends State<DemoAnimatedContainer> {
   static const String _title = 'AnimatedContainer';
-  bool selected = false;
+  bool _selected = false;
 
   @override
   Widget build(BuildContext context) {
@@ -38,14 +27,14 @@ class _DemoAnimatedContainerState extends State<DemoAnimatedContainer> {
             child: GestureDetector(
               onTap: () {
                 setState(() {
-                  selected = !selected;
+                  _selected = !_selected;
                 });
               },
               child: AnimatedContainer(
-                width: selected ? 200 : 100,
-                height: selected ? 100 : 200,
-                color: selected ? Colors.yellow : Colors.orange,
-                alignment: selected
+                width: _selected ? 200 : 100,
+                height: _selected ? 100 : 200,
+                color: _selected ? Colors.yellow : Colors.orange,
+                alignment: _selected
                     ? Alignment.center
                     : AlignmentDirectional.topCenter,
                 duration: const Duration(seconds: 2),

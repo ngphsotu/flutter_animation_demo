@@ -13,6 +13,7 @@ class DemoPositionedTransition extends StatefulWidget {
 class _DemoPositionedTransitionState extends State<DemoPositionedTransition>
     with TickerProviderStateMixin {
   static const String _title = 'PositionedTransition';
+
   late final AnimationController _controller = AnimationController(
     duration: const Duration(seconds: 2),
     vsync: this,

@@ -14,6 +14,7 @@ class _DemoRelativePositionedTransitionState
     extends State<DemoRelativePositionedTransition>
     with TickerProviderStateMixin {
   static const String _title = 'RelativePositionedTransition';
+
   late final AnimationController _controller = AnimationController(
     duration: const Duration(seconds: 2),
     vsync: this,
@@ -54,7 +55,9 @@ class _DemoRelativePositionedTransitionState
                   curve: Curves.elasticInOut,
                 )),
                 child: const Padding(
-                    padding: EdgeInsets.all(8), child: FlutterLogo()),
+                  padding: EdgeInsets.all(8),
+                  child: FlutterLogo(),
+                ),
               ),
             ],
           );

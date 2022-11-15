@@ -1,14 +1,5 @@
 import 'package:flutter/material.dart';
 
-class FifthScreen extends StatelessWidget {
-  const FifthScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const DemoAnimatedIcon();
-  }
-}
-
 class DemoAnimatedIcon extends StatefulWidget {
   const DemoAnimatedIcon({super.key});
 
@@ -18,9 +9,9 @@ class DemoAnimatedIcon extends StatefulWidget {
 
 class _DemoAnimatedIconState extends State<DemoAnimatedIcon>
     with TickerProviderStateMixin {
+  static const String _title = 'AnimatedIcon';
   bool _selected = false;
   late AnimationController _controller;
-  static const String _title = 'AnimatedIcon';
 
   @override
   void initState() {

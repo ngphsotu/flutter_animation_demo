@@ -1,16 +1,5 @@
 import 'package:flutter/material.dart';
 
-class FirstScreen extends StatelessWidget {
-  const FirstScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      body: DemoAnimatedAlign(),
-    );
-  }
-}
-
 class DemoAnimatedAlign extends StatefulWidget {
   const DemoAnimatedAlign({super.key});
 
@@ -48,8 +37,11 @@ class _DemoAnimatedAlignState extends State<DemoAnimatedAlign> {
                 child: AnimatedAlign(
                   alignment:
                       selected ? Alignment.topRight : Alignment.bottomLeft,
+                  // alignment - Kiểm soát căn chỉnh ngang và dọc tương ứng.
                   duration: const Duration(seconds: 1),
+                  // duration - Khoảng thời gian để tạo hoạt ảnh cho các thông số của vùng chứa này.
                   curve: Curves.fastOutSlowIn,
+                  // curve - Đường cong áp dụng khi tạo hoạt ảnh cho các tham số của vùng chứa này.
                   child: const FlutterLogo(size: 75),
                 ),
               ),

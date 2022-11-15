@@ -1,16 +1,5 @@
 import 'package:flutter/material.dart';
 
-class ThirdScreen extends StatelessWidget {
-  const ThirdScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      body: DemoAnimatedCrossFade(),
-    );
-  }
-}
-
 class DemoAnimatedCrossFade extends StatefulWidget {
   const DemoAnimatedCrossFade({super.key});
 
@@ -19,8 +8,8 @@ class DemoAnimatedCrossFade extends StatefulWidget {
 }
 
 class _DemoAnimatedCrossFadeState extends State<DemoAnimatedCrossFade> {
-  bool _isFormSubmitted = false;
   static const String _title = 'AnimatedCrossFade';
+  bool _isFormSubmitted = false;
 
   @override
   Widget build(BuildContext context) {
@@ -39,27 +28,28 @@ class _DemoAnimatedCrossFadeState extends State<DemoAnimatedCrossFade> {
               padding: const EdgeInsets.all(30),
               child: AnimatedCrossFade(
                 firstChild: Form(
-                    child: Column(
-                  children: [
-                    TextFormField(),
-                    const SizedBox(height: 10),
-                    TextFormField(),
-                    const SizedBox(height: 10),
-                    TextFormField(),
-                    const SizedBox(height: 10),
-                    TextButton(
-                      child: const Text(
-                        'Submit',
-                        style: TextStyle(fontSize: 15, color: Colors.pink),
+                  child: Column(
+                    children: [
+                      TextFormField(),
+                      const SizedBox(height: 10),
+                      TextFormField(),
+                      const SizedBox(height: 10),
+                      TextFormField(),
+                      const SizedBox(height: 10),
+                      TextButton(
+                        child: const Text(
+                          'Submit',
+                          style: TextStyle(fontSize: 15, color: Colors.pink),
+                        ),
+                        onPressed: () {
+                          setState(() {
+                            _isFormSubmitted = true;
+                          });
+                        },
                       ),
-                      onPressed: () {
-                        setState(() {
-                          _isFormSubmitted = true;
-                        });
-                      },
-                    ),
-                  ],
-                )),
+                    ],
+                  ),
+                ),
                 secondChild: Container(
                   color: Colors.green,
                   padding: const EdgeInsets.all(15),

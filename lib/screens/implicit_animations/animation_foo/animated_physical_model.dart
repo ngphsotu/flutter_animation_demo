@@ -1,14 +1,5 @@
 import 'package:flutter/material.dart';
 
-class EighthScreen extends StatelessWidget {
-  const EighthScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const DemoAnimatedPhysicalModel();
-  }
-}
-
 class DemoAnimatedPhysicalModel extends StatefulWidget {
   const DemoAnimatedPhysicalModel({super.key});
 
@@ -18,8 +9,8 @@ class DemoAnimatedPhysicalModel extends StatefulWidget {
 }
 
 class _DemoAnimatedPhysicalModelState extends State<DemoAnimatedPhysicalModel> {
-  bool _isFlat = true;
   static const String _title = 'AnimatedPhysicalModel';
+  bool _isFlat = true;
 
   @override
   Widget build(BuildContext context) {
@@ -54,10 +45,7 @@ class _DemoAnimatedPhysicalModelState extends State<DemoAnimatedPhysicalModel> {
             },
             child: const Text(
               'Click',
-              style: TextStyle(
-                color: Colors.pink,
-                fontSize: 15,
-              ),
+              style: TextStyle(color: Colors.pink, fontSize: 15),
             ),
           ),
         ],

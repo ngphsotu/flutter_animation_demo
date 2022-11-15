@@ -1,16 +1,5 @@
 import 'package:flutter/material.dart';
 
-class FourteenthScreen extends StatelessWidget {
-  const FourteenthScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      body: DemoAnimatedSwitcher(),
-    );
-  }
-}
-
 class DemoAnimatedSwitcher extends StatefulWidget {
   const DemoAnimatedSwitcher({super.key});
 
@@ -19,8 +8,8 @@ class DemoAnimatedSwitcher extends StatefulWidget {
 }
 
 class _DemoAnimatedSwitcherState extends State<DemoAnimatedSwitcher> {
-  int _count = 0;
   static const String _title = 'AnimatedSwitcher';
+  int _count = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +31,7 @@ class _DemoAnimatedSwitcherState extends State<DemoAnimatedSwitcher> {
               },
               child: Text(
                 '$_count',
-                key: ValueKey<int>(_count),
+                key: ValueKey(_count),
                 style: Theme.of(context).textTheme.headlineMedium,
               ),
             ),

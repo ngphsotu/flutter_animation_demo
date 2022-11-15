@@ -1,16 +1,5 @@
 import 'package:flutter/material.dart';
 
-class SixthScreen extends StatelessWidget {
-  const SixthScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      body: DemoAnimatedOpacity(),
-    );
-  }
-}
-
 class DemoAnimatedOpacity extends StatefulWidget {
   const DemoAnimatedOpacity({super.key});
 
@@ -20,10 +9,10 @@ class DemoAnimatedOpacity extends StatefulWidget {
 
 class DemoAnimatedOpacityState extends State<DemoAnimatedOpacity> {
   static const String _title = 'AnimatedOpacity';
-  double opacityLevel = 1.0;
+  double opacityLevel = 1;
 
   void _changeOpacity() {
-    setState(() => opacityLevel = opacityLevel == 0 ? 1.0 : 0);
+    setState(() => opacityLevel = opacityLevel == 0 ? 1 : 0);
   }
 
   @override
@@ -41,6 +30,7 @@ class DemoAnimatedOpacityState extends State<DemoAnimatedOpacity> {
             const SizedBox(height: 20),
             AnimatedOpacity(
               opacity: opacityLevel,
+              // Độ trong suốt của mục tiêu
               duration: const Duration(seconds: 3),
               child: const FlutterLogo(size: 300),
             ),

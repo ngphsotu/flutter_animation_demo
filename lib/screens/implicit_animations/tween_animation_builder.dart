@@ -1,16 +1,5 @@
 import 'package:flutter/material.dart';
 
-class FifteenthScreen extends StatelessWidget {
-  const FifteenthScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(child: DemoTweenAnimationBuilder()),
-    );
-  }
-}
-
 class DemoTweenAnimationBuilder extends StatefulWidget {
   const DemoTweenAnimationBuilder({super.key});
 
@@ -37,7 +26,7 @@ class _DemoTweenAnimationBuilderState extends State<DemoTweenAnimationBuilder> {
             ),
             const SizedBox(height: 20),
             TweenAnimationBuilder<double>(
-              tween: Tween<double>(begin: 0, end: targetValue),
+              tween: Tween(begin: 0, end: targetValue),
               duration: const Duration(seconds: 1),
               builder: (BuildContext context, double size, Widget? child) {
                 return IconButton(

@@ -1,16 +1,5 @@
 import 'package:flutter/material.dart';
 
-class FourthScreen extends StatelessWidget {
-  const FourthScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(child: DemoAnimatedDefaultTextStyle()),
-    );
-  }
-}
-
 class DemoAnimatedDefaultTextStyle extends StatefulWidget {
   const DemoAnimatedDefaultTextStyle({super.key});
 
@@ -21,10 +10,10 @@ class DemoAnimatedDefaultTextStyle extends StatefulWidget {
 
 class _DemoAnimatedDefaultTextStyleState
     extends State<DemoAnimatedDefaultTextStyle> {
+  static const String _title = 'AnimatedDefaultTextStyle';
   bool _selected = true;
   double _fontSize = 50;
   Color _color = Colors.amber;
-  static const String _title = 'AnimatedDefaultTextStyle';
 
   @override
   Widget build(BuildContext context) {

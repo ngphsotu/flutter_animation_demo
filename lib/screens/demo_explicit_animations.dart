@@ -34,7 +34,7 @@ class DemoExplicitAnimations extends StatelessWidget {
           ListTile(
             leading: const CustomText(text: '❤️', size: 30),
             title: const CustomText(
-              text: 'SizeTransition Example',
+              text: 'AlignTransition Example',
               size: 18,
             ),
             onTap: () => Navigator.push(context,
@@ -144,21 +144,21 @@ class DemoExplicitAnimations extends StatelessWidget {
           ListTile(
             leading: const CustomText(text: '❤️', size: 30),
             title: const CustomText(
-              text: 'AnimatedWidget Example',
-              size: 18,
-            ),
-            onTap: () => Navigator.push(context,
-                MaterialPageRoute(builder: (_) => const DemoAnimatedWidget())),
-          ),
-          const Divider(),
-          ListTile(
-            leading: const CustomText(text: '❤️', size: 30),
-            title: const CustomText(
               text: 'AnimatedBuilder Example',
               size: 18,
             ),
             onTap: () => Navigator.push(context,
                 MaterialPageRoute(builder: (_) => const DemoAnimatedBuilder())),
+          ),
+          const Divider(),
+          ListTile(
+            leading: const CustomText(text: '❤️', size: 30),
+            title: const CustomText(
+              text: 'AnimatedWidget Example',
+              size: 18,
+            ),
+            onTap: () => Navigator.push(context,
+                MaterialPageRoute(builder: (_) => const DemoAnimatedWidget())),
           ),
           const Divider(),
         ],

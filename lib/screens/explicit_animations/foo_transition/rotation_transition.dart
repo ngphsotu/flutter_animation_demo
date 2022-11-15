@@ -12,10 +12,12 @@ class DemoRotationTransition extends StatefulWidget {
 class _DemoRotationTransitionState extends State<DemoRotationTransition>
     with TickerProviderStateMixin {
   static const String _title = 'RotationTransition';
+
   late final AnimationController _controller = AnimationController(
     duration: const Duration(seconds: 2),
     vsync: this,
   )..repeat(reverse: true);
+
   late final Animation<double> _animation = CurvedAnimation(
     parent: _controller,
     curve: Curves.elasticOut,

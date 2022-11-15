@@ -15,7 +15,7 @@ class SpinningContainer extends AnimatedWidget {
     return Center(
       child: Transform.rotate(
         angle: _progress.value * 2.0 * math.pi,
-        child: Container(width: 200.0, height: 200.0, color: Colors.pink),
+        child: Container(width: 200, height: 200, color: Colors.pink),
       ),
     );
   }
@@ -33,6 +33,7 @@ class DemoAnimatedWidget extends StatefulWidget {
 class _DemoAnimatedWidgetState extends State<DemoAnimatedWidget>
     with TickerProviderStateMixin {
   static const String _title = 'AnimatedWidget';
+
   late final AnimationController _controller = AnimationController(
     duration: const Duration(seconds: 10),
     vsync: this,

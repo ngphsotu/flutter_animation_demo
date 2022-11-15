@@ -12,10 +12,12 @@ class DemoSizeTransition extends StatefulWidget {
 class _DemoSizeTransitionState extends State<DemoSizeTransition>
     with TickerProviderStateMixin {
   static const String _title = 'DemoSizeTransition';
+
   late final AnimationController _controller = AnimationController(
     duration: const Duration(seconds: 3),
     vsync: this,
   )..repeat();
+
   late final Animation<double> _animation = CurvedAnimation(
     parent: _controller,
     curve: Curves.fastOutSlowIn,

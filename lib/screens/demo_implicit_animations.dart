@@ -18,8 +18,8 @@ import 'implicit_animations/animation_foo/animated_physical_model.dart';
 import 'implicit_animations/animation_foo/animated_default_textstyle.dart';
 
 class DemoImplicitAnimations extends StatelessWidget {
-  final _controller = PageController();
   static const String _title = 'Implicit Animations';
+  final _controller = PageController();
 
   DemoImplicitAnimations({super.key});
 
@@ -41,21 +41,21 @@ class DemoImplicitAnimations extends StatelessWidget {
             child: PageView(
               controller: _controller,
               children: const [
-                FirstScreen(),
-                SecondScreen(),
-                ThirdScreen(),
-                FourthScreen(),
-                FifthScreen(),
-                SixthScreen(),
-                SeventhScreen(),
-                EighthScreen(),
-                NinthScreen(),
-                TenthScreen(),
-                EleventhScreen(),
-                TwelfthScreen(),
-                ThirteenScreen(),
-                FourteenthScreen(),
-                FifteenthScreen(),
+                DemoAnimatedAlign(),
+                DemoAnimatedContainer(),
+                DemoAnimatedCrossFade(),
+                DemoAnimatedDefaultTextStyle(),
+                DemoAnimatedIcon(),
+                DemoAnimatedOpacity(),
+                DemoAnimatedPadding(),
+                DemoAnimatedPhysicalModel(),
+                DemoAnimatedPositioned(),
+                DemoAnimatedRotation(),
+                DemoAnimatedScale(),
+                DemoAnimatedSized(),
+                DemoAnimatedSlide(),
+                DemoAnimatedSwitcher(),
+                DemoTweenAnimationBuilder(),
               ],
             ),
           ),

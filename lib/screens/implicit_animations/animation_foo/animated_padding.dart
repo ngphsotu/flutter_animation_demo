@@ -1,16 +1,5 @@
 import 'package:flutter/material.dart';
 
-class SeventhScreen extends StatelessWidget {
-  const SeventhScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      body: DemoAnimatedPadding(),
-    );
-  }
-}
-
 class DemoAnimatedPadding extends StatefulWidget {
   const DemoAnimatedPadding({super.key});
 
@@ -20,7 +9,7 @@ class DemoAnimatedPadding extends StatefulWidget {
 
 class _DemoAnimatedPaddingState extends State<DemoAnimatedPadding> {
   static const String _title = 'AnimatedPadding';
-  double padValue = 0.0;
+  double padValue = 0;
 
   void _updatePadding(double value) {
     setState(() {
