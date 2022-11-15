@@ -66,9 +66,9 @@ class DemoImplicitAnimations extends StatelessWidget {
             count: 15,
             effect: WormEffect(
               dotColor: Colors.pink.shade100,
-              dotWidth: 10,
+              dotWidth: 15,
               spacing: 10,
-              dotHeight: 10,
+              dotHeight: 15,
               activeDotColor: Colors.pink,
               //verticalOffset: 50,
             ),
