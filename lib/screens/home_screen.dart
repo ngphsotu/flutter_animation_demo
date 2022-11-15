@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '/widgets/custom_text.dart';
-import 'demo_explicit_animations.dart';
-import 'demo_implicit_animations.dart';
+import 'explicit_animations.dart';
+import 'implicit_animations.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
