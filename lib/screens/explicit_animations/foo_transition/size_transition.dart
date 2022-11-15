@@ -44,7 +44,7 @@ class _DemoSizeTransitionState extends State<DemoSizeTransition>
         axis: Axis.horizontal,
         axisAlignment: -1,
         child: const Center(
-          child: FlutterLogo(size: 200.0),
+          child: FlutterLogo(size: 200),
         ),
       ),
     );

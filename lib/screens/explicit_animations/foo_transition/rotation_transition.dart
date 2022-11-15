@@ -43,8 +43,8 @@ class _DemoRotationTransitionState extends State<DemoRotationTransition>
         child: RotationTransition(
           turns: _animation,
           child: const Padding(
-            padding: EdgeInsets.all(8.0),
-            child: FlutterLogo(size: 150.0),
+            padding: EdgeInsets.all(8),
+            child: FlutterLogo(size: 150),
           ),
         ),
       ),
